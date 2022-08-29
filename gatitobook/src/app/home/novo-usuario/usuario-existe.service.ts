@@ -1,7 +1,7 @@
 import { AbstractControl } from '@angular/forms';
 import { NovoUsuarioService } from './novo-usuario.service';
 import { Injectable } from '@angular/core';
-import { map, switchMap } from 'rxjs/operators';
+import { map, switchMap, take } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +17,8 @@ export class UsuarioExisteService {
         ),
         map((usuarioExiste) =>
           usuarioExiste ? { usuarioExistente: true } : null
-        )
+        ),
+
       );
     };
   }
