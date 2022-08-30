@@ -7,12 +7,14 @@
     <app-cartao>
       <app-animal [url]="animal.url" [descricao]="animal.description">
       </app-animal>
-      <i aria-hidden="true" class="fa fa-heart-o fa-1x mr-2">{{
-        animal.likes
-      }}</i>
-      <i aria-hidden="true" class="fa fa-comment-o fa-1x mr-2 ml-2">{{
-        animal.comments
-      }}</i>
+      <div class="block">
+        <i aria-hidden="true" class="fa fa-heart-o fa-1x mr-2"> {{
+          animal.likes
+        }}</i>
+        <i aria-hidden="true" class="fa fa-comment-o fa-1x mr-4"> {{
+          animal.comments
+        }}</i>
+      </div>
     </app-cartao>
   </div>
 </div>
